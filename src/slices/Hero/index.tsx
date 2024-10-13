@@ -56,7 +56,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         start: "top top",
         end: "bottom bottom",
         scrub: 1.5,
-        markers: true,
       },
     });
 
@@ -70,7 +69,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           backgroundColor: "#D9F990",
           overwrite: "auto",
         },
-        1,
+        2,
       )
       .from(".text-side-heading .split-char", {
         scale: 1.3,

@@ -1,5 +1,7 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import Scene from "./Scene";
+import { View } from "@react-three/drei";
 
 /**
  * Props for `SkyDive`.
@@ -14,8 +16,15 @@ const SkyDive = ({ slice }: SkyDiveProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="skydive h-screen"
     >
-      Placeholder component for sky_dive (variation: {slice.variation}) Slices
+      <h2 className="sr-only">{slice.primary.sentence}</h2>
+      <View className="h-screen w-screen">
+        <Scene
+          sentence={slice.primary.sentence}
+          flavor={slice.primary.flavor}
+        />
+      </View>
     </section>
   );
 };
